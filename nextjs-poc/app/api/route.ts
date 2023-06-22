@@ -1,11 +1,6 @@
-import { cookies } from 'next/headers';
- 
-export async function GET(request: Request) {
-  const cookieStore = cookies();
-  const token = cookieStore.get('token');
- 
-  return new Response('Hello, Next.js!', {
+export async function POST(request: Request) {
+
+  return new Response('ok', {
     status: 200,
-    headers: { 'Set-Cookie': `token=${token}` },
   });
 }
